@@ -5,6 +5,8 @@ Do define one thing, such as a Service, Facade, State, Model, Component, etc. pe
 The key is to make the code more reusable, easier to read, and less mistake prone.  
 As the app grows, this rule becomes even more important.
 
+Consider limiting files to 400 lines of code.
+
 Why?
 - One component per file makes it far easier to read, maintain, and avoid collisions with teams in source control.
 - One component per file avoids hidden bugs that often arise when combining components in a file where they may share variables, create unwanted closures, or unwanted coupling with dependencies.
@@ -154,3 +156,24 @@ export const HEROES: Hero[] = [
   { id: 3, name: 'Magneta' }
 ];
 ```
+
+## Small functions
+
+Do define small functions
+
+Consider limiting to no more than 75 lines.
+
+Why? 
+	Small functions are easier to test, especially when they do one thing and serve one purpose.
+
+Why?	
+	Small functions promote reuse.
+
+Why? 
+	Small functions are easier to read.
+
+Why? 
+	Small functions are easier to maintain.
+
+Why? 
+	Small functions help avoid hidden bugs that come with large functions that share variables with external scope, create unwanted closures, or unwanted coupling with dependencies.
